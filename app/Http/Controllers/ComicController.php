@@ -14,7 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $products = Comic::all();
+        $products = Comic::orderBy('id' , 'desc')->paginate(6);
         return view('comics.index' , compact('products'));
     }
 
