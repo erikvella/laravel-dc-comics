@@ -109,7 +109,7 @@ class ComicController extends Controller
     {
         // elimino l'entità
         $comic->delete();
-        // reindirizzo alla pagina dei prodotti
-        return redirect()->route('comics.index');
+        // reindirizzo alla pagina dei prodotti e metto in sessione il messaggio di conferma nella variabile 'deleted'
+        return redirect()->route('comics.index')->with('deleted' , "Il fumetto $comic->title è stato eliminato correttamente");
     }
 }

@@ -3,6 +3,8 @@
 @section('content')
     <h1>Dettagli fumetto</h1>
     <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning my-2 ">Modifica fumetto</a>
+    @include('partials.formDelete')
+
 
     {{-- qui stampo tutti i miei fumetti --}}
     <div class="container my-5">
